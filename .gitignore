@@ -1,4 +1,4 @@
-.elf
-.eep
-.hex
-.o
+*.elf
+*.eep 
+*.hex
+*.o
