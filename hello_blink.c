@@ -15,7 +15,7 @@ int main(void){
   //setup OCIE0A compare inturrupt
   TIMSK0 |= (1 << OCIE0A);
   //setup global interrupt status register i-bit
-  SREG |= (1 << 7);
+  //SREG |= (1 << 7);
 
   //also setup global interrupt (above may be redundant)
   sei();
@@ -26,7 +26,7 @@ int main(void){
 
     //when counter has reached desired value (500 ms) toggle arduino pin 11, at2560 portb5, reset counter
     if(counter >= 125){
-      PORTB ^= (1 << DDB5);
+      PORTB ^= (1 << PORTB5);
       counter = 0;
     }
   }
